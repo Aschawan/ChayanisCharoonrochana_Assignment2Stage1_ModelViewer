@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chayanis Charoonrochana’s 3D Model Showcase</title>
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <header>
+      <nav aria-label="Primary">
+        <a href="#hero" class="logo">Chayanis Charoonrochana 3D</a>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#productions">Models</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" aria-label="Hero">
+        <h1>My 3D Collection</h1>
+        <p>3D-scanned and AI-generated models created for MMDD226.</p>
+        <a href="#productions">View models</a>
+      </section>
+
+      <section id="productions" aria-label="Productions">
+        <h2>3D Models</h2>
+
+        <div class="grid">
+
+          <article class="production">
+            <h3>Astronaut Model</h3>
+            <model-viewer 
+              src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+              alt="Astronaut"
+              camera-controls 
+              auto-rotate 
+              environment-image="neutral"
+              shadow-intensity="1">
+            </model-viewer>
+          </article>
+
+          <article class="production">
+            <h3>Car Model</h3>
+            <model-viewer 
+              src="https://modelviewer.dev/shared-assets/models/glTF-Sample-Assets/Models/ToyCar/glTF-Binary/ToyCar.glb" 
+              alt="Car Model"
+              camera-controls 
+              auto-rotate
+              shadow-intensity="1">
+            </model-viewer>
+          </article>
+
+          <article class="production">
+            <h3>Chair Model</h3>
+            <model-viewer 
+              src="https://modelviewer.dev/assets/ShopifyModels/Chair.glb"
+              alt="Chair Model"
+              camera-controls 
+              auto-rotate
+              shadow-intensity="1">
+            </model-viewer>
+          </article>
+
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" aria-label="Footer">
+      <p>&copy; <span id="year"></span> Chayanis Charoonrochana Modeling Project</p>
+
+      <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+      </script>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+
+</html>

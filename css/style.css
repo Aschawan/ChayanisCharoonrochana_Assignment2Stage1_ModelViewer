@@ -1,0 +1,186 @@
+/* Site styles */
+
+
+/* Base */
+:root {
+  --bg: #0f1115;
+  --panel: #151922;
+  --text: #e6e9ef;
+  --muted: #a1a7b3;
+  --brand: #6ea8fe;
+  --ring: rgba(110, 168, 254, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 80% -10%, #1a2130 0%, transparent 60%),
+              radial-gradient(1000px 600px at -10% 20%, #1b2332 0%, transparent 60%),
+              var(--bg);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a { color: var(--brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Layout */
+main, header, footer, section {
+  width: 100%;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+header nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero */
+#hero {
+  padding: 3rem 0 2rem;
+}
+
+#hero h1 {
+  font-size: clamp(1.75rem, 2vw + 1rem, 2.5rem);
+  margin: 0 0 0.5rem;
+}
+
+#hero p {
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+
+#hero a {
+  display: inline-block;
+  background: linear-gradient(135deg, #6ea8fe 0%, #9b8cff 100%);
+  color: #0b0e14;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px var(--ring);
+}
+
+/* Productions */
+#productions {
+  padding-top: 1rem;
+}
+
+#productions h2 {
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+}
+
+#productions .grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+/* Model Viewer Styling */
+model-viewer {
+  width: 100%;
+  height: 280px;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  object-fit: cover;
+  --poster-color: transparent;
+}
+
+/* Make model clearer on dark background */
+model-viewer {
+  --progress-bar-color: var(--brand);
+  --progress-mask: transparent;
+}
+
+/* Smooth hovering for card */
+.production model-viewer {
+  transition: filter 0.3s ease;
+}
+
+.production:hover model-viewer {
+  filter: brightness(1.08);
+}
+
+@media (max-width: 900px) {
+  #productions .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  #productions .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.production {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.production:hover {
+  transform: translateY(-2px);
+  border-color: rgba(110,168,254,0.35);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+}
+
+.production img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.production h3 {
+  margin: 0;
+  padding: 0.85rem 1rem 1rem;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  max-width: 1100px;
+  margin: 2rem auto 3rem;
+  padding: 0 1rem;
+  color: var(--muted);
+}
+
