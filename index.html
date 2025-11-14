@@ -11,8 +11,9 @@
   </head>
 
   <body>
+    <!-- Header -->
     <header>
-      <nav aria-label="Primary">
+      <nav aria-label="Primary navigation">
         <a href="#hero" class="logo">Chayanis Charoonrochana 3D</a>
         <ul>
           <li><a href="#hero">Home</a></li>
@@ -22,18 +23,19 @@
       </nav>
     </header>
 
+    <!-- Main Content -->
     <main>
-      <section id="hero" aria-label="Hero">
+      <!-- Hero Section -->
+      <section id="hero" aria-label="Hero section">
         <h1>My 3D Collection</h1>
         <p>3D-scanned and AI-generated models created for MMDD226.</p>
         <a href="#productions">View models</a>
       </section>
 
-      <section id="productions" aria-label="Productions">
+      <!-- Productions Section -->
+      <section id="productions" aria-label="3D Models showcase">
         <h2>3D Models</h2>
-
         <div class="grid">
-
           <article class="production">
             <h3>Astronaut Model</h3>
             <model-viewer 
@@ -67,13 +69,65 @@
               shadow-intensity="1">
             </model-viewer>
           </article>
-
         </div>
       </section>
     </main>
 
-    <footer id="contact" aria-label="Footer">
-      <p>&copy; <span id="year"></span> Chayanis Charoonrochana Modeling Project</p>
+    <!-- Footer -->
+    <footer id="contact" aria-label="Contact and footer information">
+      <div class="footer-content">
+        <div class="footer-section footer-brand">
+          <h3>Chayanis Charoonrochana 3D</h3>
+          <p>Premium 3D models and digital assets. Professional quality models for your projects.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="ArtStation">ArtStation</a>
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="footer-section footer-links">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="#productions">All Models</a></li>
+            <li><a href="#productions">Featured</a></li>
+            <li><a href="#productions">New Arrivals</a></li>
+            <li><a href="#productions">Best Sellers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section footer-links">
+          <h4>About</h4>
+          <ul>
+            <li><a href="#hero">About Me</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Custom Work</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">License Agreement</a></li>
+            <li><a href="#contact">Help Center</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section footer-contact">
+          <h4>Get in Touch</h4>
+          <p>Have questions or need custom work?</p>
+          <a href="mailto:contact@chayanis3d.com" class="contact-email">nidjaroon@gmail.com</a>
+          <p class="footer-note">MMDD226 Project</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Chayanis Charoonrochana. All rights reserved.</p>
+        <p class="footer-credits">3D Models created for academic and commercial use.</p>
+      </div>
 
       <script>
         document.getElementById('year').textContent = new Date().getFullYear();
